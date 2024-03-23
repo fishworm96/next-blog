@@ -1,5 +1,5 @@
-import { isString } from "@/util/is";
-import { isFragment } from "@/util/reactNode";
+import { isString } from "utils/is";
+import { isFragment } from "utils/reactNode";
 import { Children, ReactElement, ReactNode, cloneElement } from "react";
 
 const rxTwoCNChar = /^[\u4e00-\u9fa5]{2}$/;

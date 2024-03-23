@@ -9,7 +9,7 @@ const constantsData = {
   Avatar_Link: 'http://image.fishworm.top/avatar/71592066.jfif',
   // 路径前缀
   // PREFIX: '/blog',
-  PREFIX: '/',
+  PREFIX: '',
   // 网站标题
   TITLE: '编程生活',
   // 网站描述
