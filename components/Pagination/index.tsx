@@ -1,6 +1,8 @@
 'use client'
 
 import classnames from "classnames"
+import LeftOutlined from "components/Icon/LeftOutlined";
+import RightOutlined from "components/Icon/RightOutlined";
 import { memo, useEffect, useRef, useState } from "react";
 
 interface Pagination {
@@ -49,9 +51,7 @@ const Pagination: React.FC<Pagination> = ({ defaultCurrent = 1, total = 10, onCh
         <div>
           <nav className="isolate inline-flex -space-x-px rounded-md shadow-sm" aria-label="Pagination">
             <button onClick={() => handlePageChange(current - 1)} disabled={current === 1} className={`pagination-prev ${current === 1 && `cursor-no-drop`}`}>
-              <svg className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                <path fillRule="evenodd" d="M12.79 5.23a.75.75 0 01-.02 1.06L8.832 10l3.938 3.71a.75.75 0 11-1.04 1.08l-4.5-4.25a.75.75 0 010-1.08l4.5-4.25a.75.75 0 011.06.02z" clipRule="evenodd" />
-              </svg>
+              <LeftOutlined />
             </button>
             {current > 3 &&
               (<>
@@ -73,9 +73,7 @@ const Pagination: React.FC<Pagination> = ({ defaultCurrent = 1, total = 10, onCh
               </>)
             }
             <button onClick={() => handlePageChange(current + 1)} disabled={current === total} className={`pagination-next ${current === total && `cursor-no-drop`}`}>
-              <svg className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                <path fillRule="evenodd" d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z" clipRule="evenodd" />
-              </svg>
+              <RightOutlined />
             </button>
           </nav>
         </div>
